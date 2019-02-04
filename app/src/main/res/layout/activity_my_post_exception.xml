@@ -8,22 +8,45 @@
     android:padding="@dimen/fab_margin">
 
 
+
+
+
 <ScrollView
     android:layout_alignParentTop="true"
+    android:layout_above="@+id/post_act_bottom_ll"
+    android:id="@+id/post_act_scroll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/post_act_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+<View
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:background="@color/colorPrimaryDark"/>
 
     <TextView
         android:id="@+id/post_act_tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    </LinearLayout>
 </ScrollView>
 
     <LinearLayout
+        android:id="@+id/post_act_bottom_ll"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <Button
             style="@style/Widget.AppCompat.Button.Colored"

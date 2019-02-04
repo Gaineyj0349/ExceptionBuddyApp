@@ -15,4 +15,8 @@
     <string name="main_act_javadocs">Library Javadocs</string>
     <string name="post_act_send_email">Launch Email</string>
     <string name="post_act_finish">Finish</string>
+    <string name="post_act_message">OH NO!!! It looks like there was an error! We do apologize about this! We have captured some vital logs about this crash,
+    and would appreciate if you sent it to us. Just click the email button below to bring up a prepopulated email with all the neccessary information. (nothing will
+    be sent until you confirm in the email).</string>
+
 </resources>
