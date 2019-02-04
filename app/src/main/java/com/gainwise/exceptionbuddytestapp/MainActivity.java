@@ -20,12 +20,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, Activity1a.class));
     }
 
+    public void main_act_javadocs_click(View v){
+        openWeb("https://www.gainwisetech.com/javadocs/ExceptionBuddy/");
+    }
+
     public void main_act_lib_source_click(View v){
         openWeb("https://github.com/Gaineyj0349/ExceptionBuddy");
     }
 
     public void main_act_app_source_click(View v){
-        
+        openWeb("https://github.com/Gaineyj0349/ExceptionBuddyApp");
     }
 
     public void openWeb(String url){

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.gainwise.exceptionbuddy.ExceptionBuddy;
+
 import java.math.BigDecimal;
 
 public class Activity1a extends AppCompatActivity {
@@ -14,6 +16,11 @@ public class Activity1a extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity1a);
 
+        ExceptionBuddy exceptionBuddy = new ExceptionBuddy.Builder(this)
+                                                .automaticallyInvokePostExceptionActivity(true)
+                                                .setPostExceptionActivity(MyPostExceptionActivity.class)
+                                                .withExceptionDirective(new Activity1aDirective())
+                                                .build();
 
 
 

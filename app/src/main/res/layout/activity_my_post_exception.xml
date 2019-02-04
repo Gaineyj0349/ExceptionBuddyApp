@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyPostExceptionActivity">
+    tools:context=".MyPostExceptionActivity"
+    android:padding="@dimen/fab_margin">
 
-</android.support.constraint.ConstraintLayout>
+
+<ScrollView
+    android:layout_alignParentTop="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/post_act_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</ScrollView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="post_act_send_email"
+            android:text="@string/post_act_send_email" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="post_act_finish"
+            android:text="@string/post_act_finish" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,17 +9,25 @@
     android:padding="@dimen/fab_margin">
 
     <TextView
+        android:layout_alignParentTop="true"
         android:id="@+id/activity1a_tv1"
         android:text="@string/activity1a_tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <Button
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:onClick="activity1a_bt1_click"
-        android:text="@string/activity1a_bt1"
+    <LinearLayout
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:onClick="activity1a_bt1_click"
+            android:text="@string/activity1a_bt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 
-</LinearLayout>
+</RelativeLayout>
