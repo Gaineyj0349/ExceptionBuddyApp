@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ExceptionBuddy App</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_act_tv1">This app serves to demonstrate the different functionalities of the ExceptionBuddy Library.</string>
+    <string name="main_act_bt1_click">Activity1</string>
+    <string name="activity1a_tv1">The ExceptionBuddy object was created within onCreate. with the following setup:\\n\\n</string>
+    <string name="activity1a_bt1">Crash the App</string>
+</resources>
