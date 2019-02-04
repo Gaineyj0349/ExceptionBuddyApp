@@ -6,7 +6,7 @@ import android.widget.Toast;
 import com.gainwise.exceptionbuddy.ExceptionBuddy;
 import com.gainwise.exceptionbuddy.ExceptionBuddyDirective;
 
-class Activity1aDirective extends ExceptionBuddyDirective {
+class Case1Directive extends ExceptionBuddyDirective {
 
     /*this class is necessary - as the super class contains all of the custom exception handling code.
       an instance of this class must be provided to the ExceptionBuddy builder
@@ -18,7 +18,7 @@ class Activity1aDirective extends ExceptionBuddyDirective {
     public void executeOnException() throws ExceptionBuddy.CrashBuddyException {
 
         //this is where you can place custom code to execute.
-        Toast.makeText(context, "Activity1a crash.", Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "Case1Activity crash.", Toast.LENGTH_LONG).show();
         Log.i("Exception_Buddy_App", "executeOnException called");
 
     }

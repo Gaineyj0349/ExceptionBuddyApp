@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void main_act_bt1_click(View v){
-        startActivity(new Intent(MainActivity.this, Activity1a.class));
+       startActivity(new Intent(MainActivity.this, Case1Activity.class));
     }
 
     public void main_act_javadocs_click(View v){

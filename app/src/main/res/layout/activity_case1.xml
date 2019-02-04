@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity1a"
+    tools:context=".Case1Activity"
     android:orientation="vertical"
     android:padding="@dimen/fab_margin">
 
     <TextView
         android:layout_alignParentTop="true"
-        android:id="@+id/activity1a_tv1"
-        android:text="@string/activity1a_tv1"
+        android:id="@+id/case1_tv1"
+        android:text="@string/case1_tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -22,8 +22,8 @@
 
         <Button
             style="@style/Widget.AppCompat.Button.Colored"
-            android:onClick="activity1a_bt1_click"
-            android:text="@string/activity1a_bt1"
+            android:onClick="case1_bt1_click"
+            android:text="@string/case1_bt1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
