@@ -4,10 +4,12 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.gainwise.exceptionbuddy.ExceptionBuddyUtils;
 import com.gainwise.exceptionbuddy.PostExceptionActivity;
 
 public class MyPostExceptionActivity extends PostExceptionActivity {
