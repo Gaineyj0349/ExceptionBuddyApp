@@ -12,12 +12,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
+
+    }
 
 
     public void main_act_bt1_click(View v){
        startActivity(new Intent(MainActivity.this, Case1Activity.class));
+    }
+
+
+    public void main_act_bt2_click(View v){
+        startActivity(new Intent(MainActivity.this, Case2Activity.class));
     }
 
     public void main_act_javadocs_click(View v){

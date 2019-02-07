@@ -11,6 +11,8 @@
 
 
 
+
+
 <ScrollView
     android:layout_alignParentTop="true"
     android:layout_above="@+id/post_act_bottom_ll"
@@ -23,19 +25,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:padding="@dimen/fab_margin"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/post_act_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
     <TextView
         android:text="@string/post_act_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 <View
+    android:layout_marginTop="@dimen/fab_margin"
     android:layout_width="match_parent"
     android:layout_height="2dp"
     android:background="@color/colorPrimaryDark"/>
 
-    <TextView
-        android:id="@+id/post_act_tv1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 </ScrollView>
@@ -52,8 +59,22 @@
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="post_act_see_log"
+            android:text="@string/post_act_see_logs" />
+
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:onClick="post_act_send_email"
             android:text="@string/post_act_send_email" />
+        <TextView
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:text="@string/post_act_email_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             style="@style/Widget.AppCompat.Button.Colored"

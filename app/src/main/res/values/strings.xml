@@ -7,17 +7,26 @@
         ExceptionBuddy exceptionBuddy = \n\tnew ExceptionBuddy.Builder(this)
                                                 \n\t.automaticallyInvokePostExceptionActivity(true)
                                                 \n\t.setPostExceptionActivity(MyPostExceptionActivity.class)
-                                                \n\t.withExceptionDirective(new Activity1aDirective())
+                                                \n\t.withExceptionDirective(new Case1Directive())
                                                 \n\t.build();\n\n
     Normally when an ExceptionBuddy object is constructed it will hang around to catch the uncaught exceptions, even if the activity is destroyed. However, when the android operating system needs to reclaim memory, it can destroy this object. Because of this, it is recommended to put this builder object in the automatically called method per component (for example: onCreate in an Activity, or onStartCommand for a service, or onReceive for a broadcast receiver.)</string>
-    <string name="case1_bt1">Crash the App</string>
+    <string name="case1_bt1">Crash the App Sync</string>
+    <string name="case1_bt2">Crash the App aSync</string>
     <string name="main_act_lib_source">Library Source Code</string>
     <string name="main_act_app_source">App\'s Source Code</string>
     <string name="main_act_javadocs">Library Javadocs</string>
-    <string name="post_act_send_email">Launch Email</string>
-    <string name="post_act_finish">Finish</string>
-    <string name="post_act_message">OH NO!!! It looks like there was an error! We do apologize about this! We have captured some vital logs about this crash,
-    and would appreciate if you sent it to us. Just click the email button below to bring up a prepopulated email with all the neccessary information. (nothing will
-    be sent until you confirm in the email).</string>
+    <string name="post_act_send_email">Send Logs</string>
+    <string name="post_act_finish">No thanks, Finish</string>
+    <string name="post_act_message">OH NO!!! It looks like there was an error! We do apologize about this! Vital logs about this error have been prepared and will help us resolve the issue, will you please send them to us?</string>
+    <string name="post_act_see_logs">See the logs</string>
+    <string name="post_act_email_info">(nothing is sent until you confirm once again on the next screen...you can even edit the log before sending..)</string>
+    <string name="main_act_bt2_click">CASE 2</string>
+    <string name="case2_tv1">The ExceptionBuddy object was created within onCreate. with the following setup:\n\n
+        ExceptionBuddy exceptionBuddy = \n\tnew ExceptionBuddy.Builder(this)
+                                                \n\t.automaticallyInvokePostExceptionActivity(false)
+                                                \n\t.withExceptionDirective(new Case2Directive())
+                                                \n\t.build();\n\n
+    In this case, we do not automatically trigger a post exception activity, nor provide one to the builder. But our custom code still executes, and it will carry on exception handling as we are used to, however we still squeeze in custom
+    code to execute.</string>
 
 </resources>

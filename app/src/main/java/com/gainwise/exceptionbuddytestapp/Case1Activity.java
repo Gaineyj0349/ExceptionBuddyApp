@@ -1,8 +1,10 @@
 package com.gainwise.exceptionbuddytestapp;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.gainwise.exceptionbuddy.ExceptionBuddy;
@@ -10,6 +12,8 @@ import com.gainwise.exceptionbuddy.ExceptionBuddy;
 import java.math.BigDecimal;
 
 public class Case1Activity extends AppCompatActivity {
+
+    EditText et;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,5 +37,22 @@ public class Case1Activity extends AppCompatActivity {
 
         tv.setText(bd1.divide(bd2).toString());
 
+    }
+
+    public void case1_bt2_click(View v){
+        new CrashASyncTask().execute();
+
+    }
+
+    class CrashASyncTask extends AsyncTask{
+
+        @Override
+        protected Object doInBackground(Object[] objects) {
+
+
+            String h = et.getText().toString();
+
+            return null;
+        }
     }
 }

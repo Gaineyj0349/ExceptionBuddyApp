@@ -4,40 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Case1Activity"
+    tools:context=".Case2Activity"
     android:orientation="vertical"
     android:padding="@dimen/fab_margin">
 <ScrollView
-    android:layout_above="@+id/case1_ll"
+    android:layout_above="@+id/case2_ll"
     android:layout_alignParentTop="true"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
         android:textAlignment="center"
-        android:id="@+id/case1_tv1"
-        android:text="@string/case1_tv1"
+        android:id="@+id/case2_tv1"
+        android:text="@string/case2_tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 </ScrollView>
-
     <LinearLayout
-        android:id="@+id/case1_ll"
-        android:orientation="vertical"
+        android:id="@+id/case2_ll"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Button
             style="@style/Widget.AppCompat.Button.Colored"
-            android:onClick="case1_bt1_click"
+            android:onClick="case2_bt1_click"
             android:text="@string/case1_bt1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:onClick="case1_bt2_click"
-            android:text="@string/case1_bt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -5,7 +5,7 @@ import android.util.Log;
 import com.gainwise.exceptionbuddy.ExceptionBuddy;
 import com.gainwise.exceptionbuddy.ExceptionBuddyDirective;
 
-class Case1Directive extends ExceptionBuddyDirective {
+class Case2Directive extends ExceptionBuddyDirective {
 
     /*this class is necessary - as the super class contains all of the custom exception handling code.
       an instance of this class must be provided to the ExceptionBuddy builder
@@ -16,10 +16,24 @@ class Case1Directive extends ExceptionBuddyDirective {
     @Override
     public void executeOnException() throws ExceptionBuddy.CrashBuddyException {
 
-        //this is where you can place custom code to execute.
-        Log.i("Exception_Buddy_App", "executeOnException called");
 
+
+
+        /*
+       This option is provided in case the developer wants to execute some simple code like changing sharedpref
+       values, and still wants the android default uncaught exception behavior.
+       The process has become unstable, so things like showing a toast is not possible now, maybe a future update
+       this will be possible.
+       */
+
+
+
+
+
+        Log.i("Case2Directive", "process id = " + android.os.Process.myPid());
     }
+
+
 
 
 }

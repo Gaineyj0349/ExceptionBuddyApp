@@ -4,13 +4,17 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.design.widget.BottomSheetDialog;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gainwise.exceptionbuddy.ExceptionBuddyUtils;
 import com.gainwise.exceptionbuddy.PostExceptionActivity;
+import com.squareup.picasso.Picasso;
 
 public class MyPostExceptionActivity extends PostExceptionActivity {
 
@@ -21,9 +25,18 @@ public class MyPostExceptionActivity extends PostExceptionActivity {
 
         getSupportActionBar().setTitle("WOOOPS");
 
-        TextView textView = findViewById(R.id.post_act_tv1);
+        ImageView imageView = findViewById(R.id.post_act_iv);
 
-        textView.setText(buildString());
+        Picasso.get().load(R.drawable.spawner).into(imageView);
+        RotateAnimation rotate = new RotateAnimation(
+                0, 360,
+                Animation.RELATIVE_TO_SELF, 0.5f,
+                Animation.RELATIVE_TO_SELF, 0.5f
+        );
+        rotate.setDuration(3500);
+
+        rotate.setRepeatCount(Animation.INFINITE);
+        imageView.startAnimation(rotate);
         
     }
 
@@ -49,13 +62,29 @@ public class MyPostExceptionActivity extends PostExceptionActivity {
 
     public void post_act_finish(View v){
 
-        //be sure to reset
-
-
-
         finishAffinity();
     }
 
+
+    public void post_act_see_log(View v){
+
+        BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
+        sheetDialog.setCancelable(true);
+        View view = getLayoutInflater().inflate(R.layout.bottom_sheet, null);
+        TextView tv = view.findViewById(R.id.bottom_sheet_tv);
+
+        sheetDialog.setContentView(view);
+        tv.setText(buildString());
+        sheetDialog.show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        //be sure to clear the data from this current exception, as to keep accurate record of exception.
+        ExceptionBuddyUtils.clearData(this);
+    }
 
     public void post_act_send_email(View v){
         sendEmail(buildString());
@@ -90,4 +119,6 @@ public class MyPostExceptionActivity extends PostExceptionActivity {
         }
 
     }
+
+
 }
